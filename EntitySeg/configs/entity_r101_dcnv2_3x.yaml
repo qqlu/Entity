@@ -1,0 +1,42 @@
+MODEL:
+  META_ARCHITECTURE: "EntityFPN"
+  MASK_ON: False
+  BACKBONE:
+    NAME: "build_retinanet_resnet_fpn_backbone"
+  RESNETS:
+    DEPTH: 101
+    DEFORM_ON_PER_STAGE: [False, True, True, True]
+    DEFORM_MODULATED: True
+    OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+  WEIGHTS: "pretrained_model/R-101.pkl"
+  FPN:
+    IN_FEATURES: ["res2", "res3", "res4", "res5"]
+  FCOS:
+    NUM_CLASSES: 1
+  CONDINST:
+    CLASS_AGNOSTIC: True
+    TRAIN_MAX_PROPOSALS_PER_IMAGE: 120
+    MASK_BRANCH:
+      SEMANTIC_LOSS_ON: False
+      IN_FEATURES: ["p3", "p4", "p5"]
+    MASK_HEAD:
+      CLUSTER_WEIGHT: 0.5
+      DYNAMIC: ["111", "110", "101", "100", "011", "010", "001"]
+      DYNAMIC_WEIGHT: [1.0, 1.0, 1.0, 1.0, 0.25, 0.25, 0.25]
+DATASETS:
+  TRAIN: ("coco_2017_train_entity",)
+  TEST: ("coco_2017_val_entity",)
+SOLVER:
+  WARMUP_ITERS: 1500
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.01
+  STEPS: (180000, 250000)
+  MAX_ITER: 270000
+  CHECKPOINT_PERIOD: 40000
+DATALOADER:
+  FILTER_EMPTY_ANNOTATIONS: True
+INPUT:
+  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+VERSION: 2
+TEST:
+  CLASS_AGNOSTIC: True

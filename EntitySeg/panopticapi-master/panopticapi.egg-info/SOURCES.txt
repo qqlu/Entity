@@ -1,0 +1,11 @@
+README.md
+setup.py
+panopticapi/__init__.py
+panopticapi/combine_semantic_and_instance_predictions.py
+panopticapi/evaluation.py
+panopticapi/utils.py
+panopticapi.egg-info/PKG-INFO
+panopticapi.egg-info/SOURCES.txt
+panopticapi.egg-info/dependency_links.txt
+panopticapi.egg-info/requires.txt
+panopticapi.egg-info/top_level.txt
