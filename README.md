@@ -1,21 +1,21 @@
-# Open-World Entity Segmentation
+# Open-World Entity Segmentation [Preject Website]()
 Lu Qi\*, Jason Kuen\*, Yi Wang, Jiuxiang Gu, Hengshuang Zhao, Zhe Lin, Philip Torr, Jiaya Jia
 
 <div align="center">
-  <img src="figures/motivation.png"/>
+  <img src="figures/motivation.png" width="80%"/>
 </div><br/>
 
-This project provides an implementation for the paper "[Open-World Entity Segmentation](https://jiaya.me/papers/ms_align_distill_cvpr21.pdf)" based on [Detectron2](https://github.com/facebookresearch/detectron2). Entity Segmentation is a segmentation task with the aim to segment everything in an image into semantically-meaningful regions without considering any category labels. Our entity segmentation models can perform exceptionally well in a cross-dataset setting where we use only COCO as the training dataset but we test the model on images from other datasets at inference time. Please refer to [project website]() for more details and visualizations.
+This project provides an implementation for the paper "[Open-World Entity Segmentation](https://jiaya.me/papers/ms_align_distill_cvpr21.pdf)" based on [Detectron2](https://github.com/facebookresearch/detectron2). Entity Segmentation is a segmentation task with the aim to segment everything in an image into semantically-meaningful regions without considering any category labels. Our entity segmentation models can perform exceptionally well in a cross-dataset setting where we use only COCO as the training dataset but we test the model on images from other datasets at inference time. Please refer to project website for more details and visualizations.
 
 <div align="center">
-  <img src="figures/Generalization_imagenet.png"/>
+  <img src="figures/Generalization_imagenet.png" width="600"/>
 </div><br/>
 
 
 ## Installation
 This project is based on [Detectron2](https://github.com/facebookresearch/detectron2), which can be constructed as follows.
 * Install Detectron2 following [the instructions](https://detectron2.readthedocs.io/tutorials/install.html). We are noting that our code is implemented in detectron2 commit version 28174e932c534f841195f02184dc67b941c65a67 and pytorch 1.8.
-* Setup the coco dataset including instance and panoptic annotations following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md).
+* Setup the coco dataset including instance and panoptic annotations following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md). \textbf{The code of entity evaluation metric is saved in the file of modified_cocoapi.}
 * Copy this project to `/path/to/detectron2/projects/EntitySeg`
 * Set the "find_unused_parameters=True" in distributed training of your own detectron2. You could modify it in detectron2/engine/defaults.py.
 
