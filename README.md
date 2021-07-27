@@ -171,6 +171,20 @@ We provide the results of several pretrained models on COCO *val* set. It is eas
 <td align="center">  </td>
 <td align="center"> <a href="">model</a>&nbsp;|&nbsp;<a href="">metrics</a> </td>
 
+<tr><td align="center">Ours</td>
+<td align="center">Mitb0</td>
+<td align="center">1x</td>
+<td align="center">No</td>
+<td align="center">  </td>
+<td align="center"> <a href="">model</a>&nbsp;|&nbsp;<a href="">metrics</a> </td>
+
+<tr><td align="center">Ours</td>
+<td align="center">Mitb5</td>
+<td align="center">1x</td>
+<td align="center">No</td>
+<td align="center">  </td>
+<td align="center"> <a href="">model</a>&nbsp;|&nbsp;<a href="">metrics</a> </td>
+
 </tbody></table>
 
 ## <a name="Citing Ours"></a>Citing Ours
