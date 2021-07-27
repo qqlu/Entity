@@ -1,1 +1,2 @@
 from .swin import build_retinanet_swin_fpn_backbone
+from .mixvision import build_retinanet_mit_fpn_backbone
