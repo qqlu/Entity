@@ -160,7 +160,7 @@ We provide the results of several pretrained models on COCO *val* set. It is eas
 <tr><td align="center">Ours</td>
 <td align="center">Swin-L-W7</td>
 <td align="center">3x</td>
-<td align="center">No</td>
+<td align="center">Yes</td>
 <td align="center"> 40.0 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/1xPWkf0WiF14h7wM7nuapOAEIqZsStGdm/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/19ffW1Oz-Cyf46y8k0Tz8rILLANjLqZES/view?usp=sharing">metrics</a> </td>
 
