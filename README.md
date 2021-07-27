@@ -73,7 +73,7 @@ python tools/convert_swin_to_d2.py swin_tiny_patch4_window7_224.pth swin_tiny_pa
 ```
 
 ## Results
-We provide the results of several pretrained models on COCO *val* set. It is easy to extend it to other backbones. *Rescore* indicates that we use mask rescoring by setting `MODEL.CONDINST.MASK_BRANCH.USE_MASK_RESCORE` to `True`.
+We provide the results of several pretrained models on COCO *val* set. It is easy to extend it to other backbones. *Rescore* indicates that we use mask rescoring in inference by setting `MODEL.CONDINST.MASK_BRANCH.USE_MASK_RESCORE` to `True`.
 
 <table><tbody>
 <!-- START TABLE -->
@@ -154,8 +154,15 @@ We provide the results of several pretrained models on COCO *val* set. It is eas
 <td align="center">Swin-L-W7</td>
 <td align="center">3x</td>
 <td align="center">No</td>
-<td align="center">  </td>
-<td align="center"> <a href="">model</a>&nbsp;|&nbsp;<a href="">metrics</a> </td>
+<td align="center"> 38.6 </td>
+<td align="center"> <a href="https://drive.google.com/file/d/1xPWkf0WiF14h7wM7nuapOAEIqZsStGdm/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/19ffW1Oz-Cyf46y8k0Tz8rILLANjLqZES/view?usp=sharing">metrics</a> </td>
+
+<tr><td align="center">Ours</td>
+<td align="center">Swin-L-W7</td>
+<td align="center">3x</td>
+<td align="center">No</td>
+<td align="center"> 40.0 </td>
+<td align="center"> <a href="https://drive.google.com/file/d/1xPWkf0WiF14h7wM7nuapOAEIqZsStGdm/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/19ffW1Oz-Cyf46y8k0Tz8rILLANjLqZES/view?usp=sharing">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">Swin-L-W12</td>
