@@ -118,8 +118,8 @@ We provide the results of several pretrained models on COCO *val* set. It is eas
 <td align="center">R101</td>
 <td align="center">3x</td>
 <td align="center">No</td>
-<td align="center">  </td>
-<td align="center"> <a href="">model</a>&nbsp;|&nbsp;<a href="">metrics</a> </td>
+<td align="center">33.2</td>
+<td align="center"> <a href="https://drive.google.com/file/d/1a58lNf8n6aJYY0_Lq-R002AHJpWqnEtv/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1aFYBQgK7ji6KMOfffFlyWA7gL_1bCgde/view?usp=sharing">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">R101-DCNv2</td>
