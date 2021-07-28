@@ -183,8 +183,8 @@ We provide the results of several pretrained models on COCO *val* set. It is eas
 <td align="center">MiT-b0</td>
 <td align="center">1x</td>
 <td align="center">No</td>
-<td align="center">  </td>
-<td align="center"> <a href="">model</a>&nbsp;|&nbsp;<a href="">metrics</a> </td>
+<td align="center"> 28.8 </td>
+<td align="center"> <a href="https://drive.google.com/file/d/1VxQAYsvJeNASHdfE8_XSOkQ9Kwwok4Ah/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1IUMyBbLlk5xxqVZn2NeK0FRu4cTMeDTd/view?usp=sharing">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">MiT-b5</td>
