@@ -15,7 +15,7 @@ This project provides an implementation for the paper "[Open-World Entity Segmen
 ## Installation
 This project is based on [Detectron2](https://github.com/facebookresearch/detectron2), which can be constructed as follows.
 * Install Detectron2 following [the instructions](https://detectron2.readthedocs.io/tutorials/install.html). We are noting that our code is implemented in detectron2 commit version 28174e932c534f841195f02184dc67b941c65a67 and pytorch 1.8.
-* Setup the coco dataset including instance and panoptic annotations following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md). The code of entity evaluation metric is saved in the file of modified_cocoapi.
+* Setup the coco dataset including instance and panoptic annotations following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md). The code of entity evaluation metric is saved in the file of modified_cocoapi. You can directly replace your compiled coco.py with modified_cocoapi/PythonAPI/pycocotools/coco.py. 
 * Copy this project to `/path/to/detectron2/projects/EntitySeg`
 * Set the "find_unused_parameters=True" in distributed training of your own detectron2. You could modify it in detectron2/engine/defaults.py.
 
@@ -81,21 +81,19 @@ python tools/convert_mit_to_d2.py mit_b0.pth mit_b0_trans.pth
 ```
 
 ## Results
-We provide the results of several pretrained models on COCO *val* set. It is easy to extend it to other backbones. *Rescore* indicates that we use mask rescoring in inference by setting `MODEL.CONDINST.MASK_BRANCH.USE_MASK_RESCORE` to `True`.
+We provide the results of several pretrained models on COCO *val* set. It is easy to extend it to other backbones. We first describe the results of using CNN backbone.
 
 <table><tbody>
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
-<th valign="bottom">Method</th>
-<th valign="bottom">Backbone</th>
-<th valign="bottom">Sched</th>
-<th valign="bottom">Rescore</th>
-<th valign="bottom">Entity</th>
+<th valign="center">Method</th>
+<th valign="center">Backbone</th>
+<th valign="center">Sched</th>
+<th valign="center">Entity AP</th>
 <th valign="bottom">download</th>
 <tr><td align="center">Baseline</td>
 <td align="center">R50</td>
 <td align="center">1x</td>
-<td align="center">No</td>
 <td align="center"> 28.3 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/17MsgUfjVSOs4_R8FO6mzMwtg0vH4HC57/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1UQ50Fj8e-5-LHiFEfKuOgz5SrQ7ocahD/view?usp=sharing">metrics</a> </td>
 <!-- <td align="center"> To be released </td> -->
@@ -103,14 +101,12 @@ We provide the results of several pretrained models on COCO *val* set. It is eas
 <tr><td align="center">Ours</td>
 <td align="center">R50</td>
 <td align="center">1x</td>
-<td align="center">No</td>
 <td align="center"> 29.8 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/1_p_gP5_NTTqVlSXJFqdh3h8rW2KwoV5Q/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1E1jKu29u9dwLBRA7GFDmquQUhz8ZNU8A/view?usp=sharing">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">R50</td>
 <td align="center">3x</td>
-<td align="center">No</td>
 <td align="center"> 31.8 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/1AygMH7vq3ufBwalqgycuKvagjWcWue70/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1FStVA04AUk-cs2kC07vVfG1YSyZEHlxG/view?usp=sharing">metrics</a> </td>
 <!-- <td align="center"> To be released </td> -->
@@ -118,80 +114,97 @@ We provide the results of several pretrained models on COCO *val* set. It is eas
 <tr><td align="center">Ours</td>
 <td align="center">R101</td>
 <td align="center">1x</td>
-<td align="center">No</td>
 <td align="center"> 31.0 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/13oxyTQvYKKim1SEdlS-a9ME-yVTaQhmG/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/17nuCXu9cqoJfqOsW-xFkTeDXbYYSNIzA/view?usp=sharing">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">R101</td>
 <td align="center">3x</td>
-<td align="center">No</td>
 <td align="center">33.2</td>
 <td align="center"> <a href="https://drive.google.com/file/d/1a58lNf8n6aJYY0_Lq-R002AHJpWqnEtv/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1aFYBQgK7ji6KMOfffFlyWA7gL_1bCgde/view?usp=sharing">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">R101-DCNv2</td>
 <td align="center">3x</td>
-<td align="center">No</td>
 <td align="center"> 35.5 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/1bpjZk8svC-WPvsexInXfwgIdj7rLg2gM/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1PcYLxtqHTvEsU7bx4T9Hxx-HcJ_72pnF/view?usp=sharing">metrics</a> </td>
+</tbody></table>
+
+The results of using transformer backbone as follows.The *Mask Rescore* indicates that we use mask rescoring in inference by setting `MODEL.CONDINST.MASK_BRANCH.USE_MASK_RESCORE` to `True`.
+
+<table><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="center">Method</th>
+<th valign="center">Backbone</th>
+<th valign="center">Sched</th>
+<th valign="center">Entity AP</th>
+<th valign="center">Mask Rescore</th>
+<th valign="bottom">download</th>
 
 <tr><td align="center">Ours</td>
 <td align="center">Swin-T</td>
 <td align="center">1x</td>
-<td align="center">No</td>
 <td align="center"> 33.0 </td>
+<td align="center"> 34.6 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/1uMxGjCx7pA_GocdVA-3rmvcAZQw2nvIC/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1zSqPrm9qs8pP02_bClpEnCj_dfERzkVW/view?usp=sharing">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">Swin-L-W7</td>
 <td align="center">1x</td>
-<td align="center">No</td>
 <td align="center"> 37.8 </td>
-<td align="center"> <a href="https://drive.google.com/file/d/1uAJgkFsBr_f3wGzNby_mKZA2JkkQARHh/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1nThaanHv_O21LQGaEGQuiPQab_k5NyTS/view?usp=sharing">metrics</a> </td>
-
-<tr><td align="center">Ours</td>
-<td align="center">Swin-L-W7</td>
-<td align="center">1x</td>
-<td align="center">Yes</td>
 <td align="center"> 39.3 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/1uAJgkFsBr_f3wGzNby_mKZA2JkkQARHh/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1nThaanHv_O21LQGaEGQuiPQab_k5NyTS/view?usp=sharing">metrics</a> </td>
 
-
 <tr><td align="center">Ours</td>
 <td align="center">Swin-L-W7</td>
 <td align="center">3x</td>
-<td align="center">No</td>
 <td align="center"> 38.6 </td>
-<td align="center"> <a href="https://drive.google.com/file/d/1xPWkf0WiF14h7wM7nuapOAEIqZsStGdm/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/19ffW1Oz-Cyf46y8k0Tz8rILLANjLqZES/view?usp=sharing">metrics</a> </td>
-
-<tr><td align="center">Ours</td>
-<td align="center">Swin-L-W7</td>
-<td align="center">3x</td>
-<td align="center">Yes</td>
 <td align="center"> 40.0 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/1xPWkf0WiF14h7wM7nuapOAEIqZsStGdm/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/19ffW1Oz-Cyf46y8k0Tz8rILLANjLqZES/view?usp=sharing">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">Swin-L-W12</td>
 <td align="center">3x</td>
-<td align="center">No</td>
-<td align="center">  </td>
+<td align="center"> TBD </td>
+<td align="center"> TBD </td>
 <td align="center"> <a href="">model</a>&nbsp;|&nbsp;<a href="">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">MiT-b0</td>
 <td align="center">1x</td>
-<td align="center">No</td>
 <td align="center"> 28.8 </td>
+<td align="center"> 30.4 </td>
 <td align="center"> <a href="https://drive.google.com/file/d/1VxQAYsvJeNASHdfE8_XSOkQ9Kwwok4Ah/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1IUMyBbLlk5xxqVZn2NeK0FRu4cTMeDTd/view?usp=sharing">metrics</a> </td>
+
+<tr><td align="center">Ours</td>
+<td align="center">MiT-b2</td>
+<td align="center">1x</td>
+<td align="center"> 35.1 </td>
+<td align="center"> 36.6 </td>
+<td align="center"> <a href="https://drive.google.com/file/d/1alwiIhouGSA-3W9PlN90ArwCDlg-t_ih/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/18IxTXBaW6k_oL6icCHgyfD4C-1F9TSHE/view?usp=sharing">metrics</a> </td>
+
+<tr><td align="center">Ours</td>
+<td align="center">MiT-b3</td>
+<td align="center">1x</td>
+<td align="center"> 36.9 </td>
+<td align="center"> 38.5 </td>
+<td align="center"> <a href="https://drive.google.com/file/d/17PdEcCIOt-Uzjp2xYL1c3ejzqmHWA8e5/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1OKzOjTyzr3ce_SJjt1IrnZZ0oh8ebPOy/view?usp=sharing">metrics</a> </td>
 
 <tr><td align="center">Ours</td>
 <td align="center">MiT-b5</td>
 <td align="center">1x</td>
-<td align="center">No</td>
-<td align="center">  </td>
+<td align="center"> 37.2 </td>
+<td align="center"> 38.7 </td>
+<td align="center"> <a href="https://drive.google.com/file/d/1KKjcu8A7p7fvGBPaK7P3DAit5N0B5tD-/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1y7AmbxGI6O8AGh2AG2ROUy54YovQk1TX/view?usp=sharing">metrics</a> </td>
+
+<tr><td align="center">Ours</td>
+<td align="center">MiT-b5</td>
+<td align="center">3x</td>
+<td align="center"> TBD </td>
+<td align="center"> TBD </td>
 <td align="center"> <a href="">model</a>&nbsp;|&nbsp;<a href="">metrics</a> </td>
+
 
 </tbody></table>
 
