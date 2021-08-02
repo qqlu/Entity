@@ -5,7 +5,7 @@ Lu Qi\*, Jason Kuen\*, Yi Wang, Jiuxiang Gu, Hengshuang Zhao, Zhe Lin, Philip To
   <img src="figures/motivation.png" width="80%"/>
 </div><br/>
 
-This project provides an implementation for the paper "[Open-World Entity Segmentation]()" based on [Detectron2](https://github.com/facebookresearch/detectron2). Entity Segmentation is a segmentation task with the aim to segment everything in an image into semantically-meaningful regions without considering any category labels. Our entity segmentation models can perform exceptionally well in a cross-dataset setting where we use only COCO as the training dataset but we test the model on images from other datasets at inference time. Please refer to project website for more details and visualizations.
+This project provides an implementation for the paper "[Open-World Entity Segmentation](https://arxiv.org/abs/2107.14228)" based on [Detectron2](https://github.com/facebookresearch/detectron2). Entity Segmentation is a segmentation task with the aim to segment everything in an image into semantically-meaningful regions without considering any category labels. Our entity segmentation models can perform exceptionally well in a cross-dataset setting where we use only COCO as the training dataset but we test the model on images from other datasets at inference time. Please refer to project website for more details and visualizations.
 
 <div align="center">
   <img src="figures/Generalization_imagenet.png" width="600"/>
