@@ -207,14 +207,14 @@ The results of using transformer backbone as follows.The *Mask Rescore* indicate
 
 </tbody></table>
 
-## Cross Dataset Results (Same Epoch)
+## Cross Dataset Results for R-50 (12 Epoch)
 TBD
 <table><tbody>
 <th valign="center">Dataset</th>
 <th valign="center">TEST-COCO</th>
 <th valign="center">TEST-ADE20K</th>
 <th valign="center">TEST-CITY</th>
-<th valign="bottom">download</th>
+<th valign="center">download</th>
 
 <tr><td align="center">TRAIN-COCO</td>
 <td align="center">TBD</td>
@@ -239,6 +239,22 @@ TBD
 <td align="center">TBD</td>
 <td align="center">TBD </td>
 <td align="center"> <a href="">model</a>&nbsp;|&nbsp;<a href="">metrics</a> </td>
+
+<table><tbody>
+
+## Cross Dataset Results for Swin-L7 (36 Epoch)
+<table><tbody>
+<th valign="center">Dataset</th>
+<th valign="center">TEST-COCO</th>
+<th valign="center">TEST-ADE20K</th>
+<th valign="center">TEST-CITY</th>
+<th valign="center">download</th>
+
+<tr><td align="center">TRAIN-ALL</td>
+<td align="center">38.9</td>
+<td align="center">37.0</td>
+<td align="center">33.0 </td>
+<td align="center"> <a href="https://drive.google.com/file/d/1ljAeCFlSh6BG6GM1UtzBiJdKVj1_ztSE/view?usp=sharing">model</a>&nbsp;|&nbsp;<a href="https://drive.google.com/file/d/1MwF1oeJ7W782m_4YXgrPvGP_IYEWY7ms/view?usp=sharing">metrics</a> </td>
 
 <table><tbody>
 
