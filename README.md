@@ -266,10 +266,10 @@ TBD
 Consider to cite **Open-World Entity Segmentation** if it helps your research.
 
 ```
-@inprocedings{qi2021open,
-  title={Open World Entity Segmentation},
-  author={Lu Qi, Jason Kuen, Yi Wang, Jiuxiang Gu, Hengshuang Zhao, Zhe Lin, Philip Torr, Jiaya Jia},
-  booktitle={arxiv},
+@article{qi2021open,
+  title={Open-World Entity Segmentation},
+  author={Qi, Lu and Kuen, Jason and Wang, Yi and Gu, Jiuxiang and Zhao, Hengshuang and Lin, Zhe and Torr, Philip and Jia, Jiaya},
+  journal={arXiv preprint arXiv:2107.14228},
   year={2021}
 }
 ```
