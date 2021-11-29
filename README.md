@@ -1,4 +1,4 @@
-# EntitySeg: Towards precise and open-world image segmentation
+# EntitySeg Toolbox: Towards precise and open-world image segmentation
 
 EntitySeg is an open source toolbox which towards precise and open-world image segmentation on top of [detectron2](https://github.com/facebookresearch/detectron2). All works related to image segmentation from our group are open-sourced here.
 
