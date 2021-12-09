@@ -6,7 +6,7 @@ To date, EntitySeg implements the following algorthms:
 
 * [Open-World Entity Segmentation](Entity/README.md)
 * [High Quality Segmentation for Ultra High-resolution Images]() ---_code to be released_
-* [pretraining]() ---_paper and code to be released_
+* [CaSP: Class-agnostic Semi-Supervised Pretraining for Detection and Segmentation]() ---_code to be released_
 * [Scale-aware Automatic Augmentation for Object Detection]() ---code to be merged
 
 
