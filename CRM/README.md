@@ -60,7 +60,7 @@ For the evaluation dataset BIG. Please download it follow the CascadePSP's instr
 To train model with 2 GPUs, run:
 ```bash
 cd CRM/
-python train.py 7474 -i 45000 -b 12 --steps 22500 37500 --lr 2.25e-4 --ce_weight 1.0 --l1_weight 0.5 --l2_weight 0.5 --grad_weight 2.0
+python train.py Exp_ID -i 45000 -b 12 --steps 22500 37500 --lr 2.25e-4 --ce_weight 1.0 --l1_weight 0.5 --l2_weight 0.5 --grad_weight 2.0
 ```
 
 ## Evaluation and Visualization
