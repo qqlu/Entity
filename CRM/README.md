@@ -105,10 +105,10 @@ For convenience, we provide segmentation results from other models for evaluatio
 
 | Dataset | Coarse Mask Source | Output Link |
 |--------------|:-------------------------:|:-------------------------------:|
-| BIG (Test)   | DeeplabV3+  | [Link](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155154510_link_cuhk_edu_hk/EciVLCRDGltFrPuo9rTaLo0BU5vdCgYz8BQ4c7rcEWq5PQ?e=Y7l9XN) |
-|              | RefineNet   | [Link](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155154510_link_cuhk_edu_hk/EXz2__vC1VhCu4cnkY5pFyoBAeW1ah1QZ6tWkpLOJUSRKw?e=caVCX0) |
-|              | PSPNet      | [Link](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155154510_link_cuhk_edu_hk/EXL9zFi7FiJMsK9OcFGMh2gBeNjTir5f4xkBudUfCxxMbg?e=aaWTwC) |
-|              | FCN-8s      | [Link](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155154510_link_cuhk_edu_hk/EeS4LCUPkFNMjW2_79LyY-QBuZedyq_vuy0f75iT1G6Brw?e=ebbQ4s) |
+| BIG (Test)   | DeeplabV3+  | [Link](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155154510_link_cuhk_edu_hk/Ef_hUoB9l3dFvm6oonaT478BCOrNhEzP7uggqxTFbQROBA?e=K5WduB) |
+|              | RefineNet   | [Link](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155154510_link_cuhk_edu_hk/EfpxzKaGxh5IiJbln-Q2JkcB2IHJLxBl3SgHwu0lFmttNA?e=CTBECY) |
+|              | PSPNet      | [Link](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155154510_link_cuhk_edu_hk/EbTj8f0BybtEq6Xa_Xh_86cBpwJh9S29GO_PfdoUDAoU5A?e=yfrDvp) |
+|              | FCN-8s      | [Link](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155154510_link_cuhk_edu_hk/Ecw5Oj8JcsROt5HMgL03-BwBTM0I8ysTFIGZ-XzoVKZ1Uw?e=n8yJeR) |
 
 ## <a name="Citing Ours"></a>Citing Ours
 
