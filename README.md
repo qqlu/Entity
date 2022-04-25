@@ -1,13 +1,12 @@
-# EntitySeg Toolbox: Towards precise and open-world image segmentation
+# EntitySeg Toolbox: Towards open-world and high-quality image segmentation
 
-EntitySeg is an open source toolbox which towards precise and open-world image segmentation on top of [detectron2](https://github.com/facebookresearch/detectron2). All works related to image segmentation from our group are open-sourced here.
+EntitySeg is an open source toolbox which towards open-world and high-quality image segmentation. All works related to image segmentation from our group are open-sourced here.
 
 To date, EntitySeg implements the following algorthms:
 
-* [Open-World Entity Segmentation](Entity/README.md)
-* [High Quality Segmentation for Ultra High-resolution Images]() ---_code to be released_
-* [CaSP: Class-agnostic Semi-Supervised Pretraining for Detection and Segmentation]() ---_code to be released_
-* [Scale-aware Automatic Augmentation for Object Detection]() ---code to be merged
+* [Open-World Entity Segmentation](Entity/README.md) --- _released_
+* [High Quality Segmentation for Ultra High-resolution Images](High-Quality-Segmention/README.md) --- _released_
+* [CaSSL: Class-agnostic Semi-Supervised Learning for Detection and Segmentation]() ---_code to be released_
 
 
 ## Usage
@@ -27,12 +26,11 @@ Please refer to the README.md of each project. All projects shared the similar d
   year={2021}
 }
 
-@inproceedings{chen2021scale,
-  title={Scale-aware Automatic Augmentation for Object Detection},
-  author={Chen, Yukang and Li, Yanwei and Kong, Tao and Qi, Lu and Chu, Ruihang and Li, Lei and Jia, Jiaya},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={9563--9572},
-  year={2021}
+@article{shen2021high,
+  title={High Quality Segmentation for Ultra High-resolution Images},
+  author={Tiancheng Shen, Yuechen Zhang, Lu Qi, Jason Kuen, Xingyu Xie, Jianlong Wu, Zhe Lin, Jiaya Jia},
+  journal={CVPR},
+  year={2022}
 }
 
 ```
