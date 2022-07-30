@@ -4,15 +4,15 @@ EntitySeg is an open source toolbox which towards open-world and high-quality im
 
 To date, EntitySeg implements the following algorthms:
 
-* [Open-World Entity Segmentation](Entity/README.md) --- _released_
-* [High Quality Segmentation for Ultra High-resolution Images](High-Quality-Segmention/README.md) --- _released_
-* [CaSSL: Class-agnostic Semi-Supervised Learning for Detection and Segmentation]() ---_code to be released_
+* [Open-World Entity Segmentation (arXiv)](Entity/README.md) --- _released_ 
+* [High Quality Segmentation for Ultra High-resolution Images (CVPR2022)](High-Quality-Segmention/README.md) --- _released_
+* [CA-SSL: Class-Agnostic Semi-Supervised Learning for Detection and Segmentation (ECCV2022)]() --- _code to be released_
+* [Automatically Discovering Novel Visual Categories with Adaptive Prototype Learning] --- _code to be released_
 
 
 ## Usage
 
-Please refer to the README.md of each project. All projects shared the similar detectron2 base code and could support each other.
-
+Please refer to the README.md of each project. All projects would be merged to support each other in the soon.
 
 
 ## Citing Ours
@@ -30,6 +30,13 @@ Please refer to the README.md of each project. All projects shared the similar d
   title={High Quality Segmentation for Ultra High-resolution Images},
   author={Tiancheng Shen, Yuechen Zhang, Lu Qi, Jason Kuen, Xingyu Xie, Jianlong Wu, Zhe Lin, Jiaya Jia},
   journal={CVPR},
+  year={2022}
+}
+
+@article{qi2022cassl,
+  title={CA-SSL: Class-Agnostic Semi-Supervised Learning for Detection and Segmentation},
+  author={Qi, Lu and Kuen, Jason and Lin, Zhe and Gu, Jiuxiang and Rao, Fengyun and Li, Dian and Guo, Weidong and Wen, Zhen and Yang, Ming-Hsuan and Jia, Jiaya},
+  journal={ECCV},
   year={2022}
 }
 

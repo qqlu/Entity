@@ -11,6 +11,8 @@ This project provides an implementation for the paper "[Open-World Entity Segmen
   <img src="figures/Generalization_imagenet.png" width="600"/>
 </div><br/>
 
+## Update
+* 30.07.2022: We rebuild the dataloader with RLE Encoding in the `EntitySegRLE` file. You can just replace the `EntitySegRLE` with `EntitySeg` in the instructions described below. To generate the RLE Format with the past data format in our past version, please refer to the code `EntitySegRLE/tools/makeRLE_COCO2017.py`
 
 ## Installation
 This project is based on [Detectron2](https://github.com/facebookresearch/detectron2), which can be constructed as follows.
@@ -18,6 +20,7 @@ This project is based on [Detectron2](https://github.com/facebookresearch/detect
 * Setup the coco dataset including instance and panoptic annotations following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md). The code of entity evaluation metric is saved in the file of modified_cocoapi. You can directly replace your compiled coco.py with modified_cocoapi/PythonAPI/pycocotools/coco.py. 
 * Copy this project to `/path/to/detectron2/projects/EntitySeg`
 * Set the "find_unused_parameters=True" in distributed training of your own detectron2. You could modify it in detectron2/engine/defaults.py.
+
 
 ## Data pre-processing
 (1) Generate the entity information of each image by the instance and panoptic annotation. Please change the path of coco annotation files in the following code.
