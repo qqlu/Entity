@@ -7,6 +7,7 @@ To date, EntitySeg implements the following algorthms:
 * [Open-World Entity Segmentation (arXiv)](Entity/README.md) --- _released_ 
 * [High Quality Segmentation for Ultra High-resolution Images (CVPR2022)](High-Quality-Segmention/README.md) --- _released_
 * [CA-SSL: Class-Agnostic Semi-Supervised Learning for Detection and Segmentation (ECCV2022)]() --- _code to be released_
+* [EntityV2: Fine-Grained Entity Segmentation]() --- _code to be released_
 * [Automatically Discovering Novel Visual Categories with Adaptive Prototype Learning]() --- _code to be released_
 
 
