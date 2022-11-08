@@ -1,6 +1,6 @@
 # Entityv2: Fine-Grained Entity Segmentation <font size=6>[Project Website](http://luqi.info/entityv2.github.io/)
 
-Lu Qi* Jason Kuen\*, Weidong Guo*, Tiancheng Shen*, Jiuxiang Gu, Wenbo Li, Jiaya Jia, Zhe Lin, Ming-Hsuan Yang
+Lu Qi* Jason Kuen*, Weidong Guo*, Tiancheng Shen*, Jiuxiang Gu, Wenbo Li, Jiaya Jia, Zhe Lin, Ming-Hsuan Yang
 
 <div align="center">
   <img src="figures/teaser_mosaic_low.png" width="90%"/>
