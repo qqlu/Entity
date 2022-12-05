@@ -4,7 +4,7 @@ EntitySeg is an open source toolbox which towards open-world and high-quality im
 
 To date, EntitySeg implements the following algorthms:
 
-* [Open-World Entity Segmentation (arXiv)](Entity/README.md) --- _released_ 
+* [Open-World Entity Segmentation (TAPMI2022)](Entity/README.md) --- _released_ 
 * [High Quality Segmentation for Ultra High-resolution Images (CVPR2022)](High-Quality-Segmention/README.md) --- _released_
 * [CA-SSL: Class-Agnostic Semi-Supervised Learning for Detection and Segmentation (ECCV2022)]() --- _code to be released_
 * [Fine-Grained Entity Segmentation](Entityv2/README.md) --- _paper, dataset and code to be released_
