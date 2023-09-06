@@ -7,6 +7,11 @@ This project offers an implementation of the paper, "[High-Quality Entity Segmen
   <img src="figures/teaser_mosaic_low.png" width="90%"/>
 </div><br/>
 
+## News
+2023-09-06 Initialize the README. The data and code will be released in this week.
+
+2023-08-01 Our paper is accepted as ICCV oral.
+
 ## Data
 Please refer to the official repo [EntitySeg-Dataset](https://github.com/adobe-research/EntitySeg-Dataset) for annotation files and image URLs.
 For convenience, we provide the images in several links including [Google Drive](), [Hugging Face]() and [Baidu Drive]() but we do not own the copyright of the images. It is solely your responsibility to check the original licenses of the images before using them. Any use of the images are at your own discretion and risk.
