@@ -180,10 +180,11 @@ We provide the results of several pretrained models on EntitySeg *val* set. For 
 Consider to cite **Fine-Grained Entity Segmentation** if it helps your research.
 
 ```
-@article{qi2022fine,
-  title={Fine-Grained Entity Segmentation},
-  author={Qi, Lu and Kuen, Jason and Guo, Weidong and Shen, Tiancheng and Gu, Jiuxiang and Li, Wenbo and Jia, Jiaya and Lin, Zhe and Yang, Ming-Hsuan},
-  journal={arXiv preprint arXiv:2211.05776},
-  year={2022}
+@InProceedings{Qi_2023_EntitySeg,
+    author    = {Qi, Lu and Kuen, Jason and Shen, Tiancheng and Gu, Jiuxiang and Guo, Weidong and Jia, Jiaya and Lin, Zhe and Yang, Ming-Hsuan},
+    title     = {High-Quality Entity Segmentation},
+    booktitle = {International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
 }
 ```
