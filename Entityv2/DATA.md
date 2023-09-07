@@ -1,7 +1,7 @@
 ## Data Description
 Within the EntitySeg dataset downloaded from the official repo [EntitySeg-Dataset](https://github.com/adobe-research/EntitySeg-Dataset/releases/tag/v1.0), we offer both the high-resolution (original) images as well as their downsized, low-resolution counterparts. The term `lr` denotes these low-resolution versions. Comprehensive details about the dataset can be found in the files: `entityv2_010203_entity_train.json` and `entityv2_010203_entity_val.json`. Any additional annotations have been derived or processed based on these two primary annotation files. 
 
-For the annotation formats, we strictly follow the dataloader format of detectron2 in semantic, instance and panoptic segmentation.
+For the annotation formats, we strictly follow the dataloader format of detectron2 in semantic, instance and panoptic segmentation. The entity segmentation annotations follow the COCO instance segmentation format.
 ```
 ├detectron2
 ├── ...

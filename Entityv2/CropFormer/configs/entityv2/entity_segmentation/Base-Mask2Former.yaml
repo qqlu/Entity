@@ -1,0 +1,49 @@
+ENTITY:
+  ENABLE: True
+MODEL:
+  BACKBONE:
+    FREEZE_AT: 0
+    NAME: "build_resnet_backbone"
+  WEIGHTS: "R-50.pkl"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  RESNETS:
+    DEPTH: 50
+    STEM_TYPE: "basic"  # not used
+    STEM_OUT_CHANNELS: 64
+    STRIDE_IN_1X1: False
+    OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+    # NORM: "SyncBN"
+    RES5_MULTI_GRID: [1, 1, 1]  # not used
+DATASETS:
+  TRAIN: ("entityv2_entity_train_01",)
+  TEST: ("entityv2_entity_val_01",)
+SOLVER:
+  STEPS: (30525, 33138)
+  MAX_ITER: 34375
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.0001
+  WARMUP_FACTOR: 1.0
+  WARMUP_ITERS: 0
+  WEIGHT_DECAY: 0.05
+  OPTIMIZER: "ADAMW"
+  LR_SCHEDULER_NAME: "WarmupPolyLR"
+  BACKBONE_MULTIPLIER: 0.1
+  CLIP_GRADIENTS:
+    ENABLED: True
+    CLIP_TYPE: "full_model"
+    CLIP_VALUE: 0.01
+    NORM_TYPE: 2.0
+  AMP:
+    ENABLED: True
+INPUT:
+  MASK_FORMAT: "bitmask"
+  FORMAT: "RGB"
+  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+  DATASET_MAPPER_NAME: "entity_crop"
+TEST:
+  EVAL_PERIOD: 400000
+DATALOADER:
+  FILTER_EMPTY_ANNOTATIONS: True
+  NUM_WORKERS: 32
+VERSION: 2

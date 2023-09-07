@@ -1,0 +1,41 @@
+_BASE_: "Base-Panoptic-FPN.yaml"
+MODEL:
+  BACKBONE:
+    NAME: "build_retinanet_swin_fpn_backbone_origin"
+    FREEZE_AT: -1
+  SWINT:
+    EMBED_DIM: 96
+    PATCH_SIZE: 4
+    OUT_FEATURES: ["stage2", "stage3", "stage4", "stage5"]
+    DEPTHS: [2, 2, 6, 2]
+    NUM_HEADS: [3, 6, 12, 24]
+    WINDOW_SIZE: 7
+    MLP_RATIO: 4
+    DROP_PATH_RATE: 0.2
+    APE: False
+  WEIGHTS: "swin_tiny_patch4_window7_224.pkl"
+  FPN:
+    IN_FEATURES: ["stage2", "stage3", "stage4", "stage5"]
+    NORM: 'GN'
+    TOP_LEVELS: 2
+  MASK_FORMER:
+    TEST:
+      SEMANTIC_ON: False
+      INSTANCE_ON: False
+      PANOPTIC_ON: True
+SOLVER:
+  OPTIMIZER: "ADAMW"
+  WARMUP_ITERS: 1500
+  BASE_LR: 0.0001
+  WARMUP_FACTOR: 1.0
+  WARMUP_ITERS: 0
+  WEIGHT_DECAY: 0.05
+  LR_SCHEDULER_NAME: "WarmupPolyLR"
+  BACKBONE_MULTIPLIER: 0.1
+  CLIP_GRADIENTS:
+    ENABLED: True
+    CLIP_TYPE: "full_model"
+    CLIP_VALUE: 0.01
+    NORM_TYPE: 2.0
+  
+

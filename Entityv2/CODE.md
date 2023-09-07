@@ -15,8 +15,10 @@ cd projects/CropFormer/mask2former/modeling/pixel_decoder/ops
 sudo sh make.sh
 ```
 
-<!-- #### Pretrained weights of [Swin Transformers](https://github.com/microsoft/Swin-Transformer) -->
-<!-- Use the tools/convert-pretrained-swin-model-to-d2.py to convert the pretrained weights of Swin Transformers to the detectron2 format. -->
+## Warning before training and eveluation. 
+For class-agnostic entity segmentation, please launch the `projects/CropFormer/train_net_entity.py`. 
+
+For class-aware semantic, instance and panoptic segmentation, please launch the `projects/CropFormer/train_net.py`.
 
 ## Training
 To train model with 8 GPUs, run:

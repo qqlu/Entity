@@ -1,0 +1,18 @@
+_BASE_: "Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "R-50.pkl"
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 50
+  ROI_HEADS:
+    NUM_CLASSES: 206
+SOLVER:
+  STEPS: (30525, 33138)
+  MAX_ITER: 34375
+DATASETS:
+  TRAIN: ("entityv2_instance_train",)
+  TEST: ("entityv2_instance_val",)
+INPUT:
+  MASK_FORMAT: "bitmask"
+  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+  DATASET_MAPPER_NAME: ""
