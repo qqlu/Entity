@@ -10,7 +10,7 @@ This project offers an implementation of the paper, "[High-Quality Entity Segmen
 ## News
 2023-09-07 The dataset, code and pretrained models are released.
 
-2023-08-01 Our paper is accepted as ICCV oral.
+2023-08-01 Our paper is accepted as ICCV2023 oral.
 
 ## Data
 Please refer to the official repo [EntitySeg-Dataset](https://github.com/adobe-research/EntitySeg-Dataset) for annotation files and image URLs.
