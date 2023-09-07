@@ -178,4 +178,4 @@ Consider to cite **High Quality Entity Segmentation** if it helps your research.
 }
 ```
 ## <a name="License"></a>License
-CC BY-NC 4.0
+The code and models are released under the [CC BY-NC 4.0 license](https://creativecommons.org/licenses/by-nc/4.0/).
