@@ -28,24 +28,24 @@ Please refer to the README.md of each project. All projects would be merged to s
   year={2022},
 }
 
-@article{shen2021high,
+@inproceedings{shen2021high,
   title={High Quality Segmentation for Ultra High-resolution Images},
   author={Tiancheng Shen, Yuechen Zhang, Lu Qi, Jason Kuen, Xingyu Xie, Jianlong Wu, Zhe Lin, Jiaya Jia},
-  journal={CVPR},
+  booktitle={CVPR},
   year={2022}
 }
 
-@article{qi2022cassl,
+@inproceedings{qi2022cassl,
   title={CA-SSL: Class-Agnostic Semi-Supervised Learning for Detection and Segmentation},
   author={Qi, Lu and Kuen, Jason and Lin, Zhe and Gu, Jiuxiang and Rao, Fengyun and Li, Dian and Guo, Weidong and Wen, Zhen and Yang, Ming-Hsuan and Jia, Jiaya},
-  journal={ECCV},
+  booktitle={ECCV},
   year={2022}
 }
 
-@article{qi2022fine,
-  title={Fine-grained entity segmentation},
+@inproceedings{qi2022fine,
+  title={High-Quality entity segmentation},
   author={Qi, Lu and Kuen, Jason and Shen, Tiancheng and Gu, Jiuxiang and Guo, Weidong and Jia, Jiaya and Lin, Zhe and Yang, Ming-Hsuan},
-  journal={ICCV},
+  booktitle={ICCV},
   year={2023}
 }
 
