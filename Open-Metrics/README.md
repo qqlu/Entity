@@ -1,7 +1,7 @@
 # Open Evaluation Metrics API (Beta version)
 Hao Zhou, Tiancheng Shen, Xu Yang, Hai Huang, Xiangtai Li, Lu Qi, Ming-Hsuan Yang
 
-This package contain evalution codes of Open mIoU, Open AP, and Open PQ. We will release the benchmark on each model soon.
+This package contain evalution codes of Open mIoU, Open AP, and Open PQ. We will release the similarity score matrix of each dataset soon.
 
 ## Installation
 Clone Repo:
