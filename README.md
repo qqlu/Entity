@@ -8,7 +8,8 @@ To date, EntitySeg implements the following algorthms:
 * [High Quality Segmentation for Ultra High-resolution Images (CVPR2022)](High-Quality-Segmention/README.md) --- _released_
 * [CA-SSL: Class-Agnostic Semi-Supervised Learning for Detection and Segmentation (ECCV2022)]() ---  _released_
 * [High-Quality Entity Segmentation (ICCV2023 Oral)](Entityv2/README.md) ---  _released_
-* [Automatically Discovering Novel Visual Categories with Adaptive Prototype Learning]() --- _code to be released_
+* [AIMS: All-Inclusive Multi-Level Segmentation (NeurlPS2023 Spotlight)]() -- code to be released
+* [Rethinking Evaluation Metrics of Open-Vocabulary Segmentaion]() --- _released_
 * [AIMS: All-Inclusive Multi-Level Segmentation (NeurlPS2023 Spotlight)]() -- code to be released
 
 
