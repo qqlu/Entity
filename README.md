@@ -2,7 +2,7 @@
 
 EntitySeg is an open source toolbox which towards open-world and high-quality image segmentation. All works related to image segmentation from our group are open-sourced here.
 
-To date, EntitySeg implements the following algorthms:
+To date, EntitySeg implements the following algorithms:
 
 * [Open-World Entity Segmentation (TPAMI2022)](Entity/README.md) --- _released_ 
 * [High Quality Segmentation for Ultra High-resolution Images (CVPR2022)](High-Quality-Segmention/README.md) --- _released_
