@@ -10,6 +10,8 @@ To date, EntitySeg implements the following algorithms:
 * [High-Quality Entity Segmentation (ICCV2023 Oral)](Entityv2/README.md) ---  _released_
 * [Rethinking Evaluation Metrics of Open-Vocabulary Segmentaion](Open-Metrics/README.md) --- _released_
 * [AIMS: All-Inclusive Multi-Level Segmentation (NeurlPS2023 Spotlight)]() -- code to be released
+* [UniGS: Unified Representation for Image Generation and Segmentation (Arxiv)]() -- code to be released
+  
 
 
 ## Usage
